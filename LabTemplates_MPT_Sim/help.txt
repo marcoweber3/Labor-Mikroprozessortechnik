@@ -1,0 +1,4 @@
+Zum Kopieren eines Ordners aus den Vorlagen werden jeweils nur folgende 3 Dateien benötigt:
+versuch_x.c
+versuch_x.uvoptx
+versuch_x.uvprojx

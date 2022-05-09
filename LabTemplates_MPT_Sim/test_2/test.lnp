@@ -1,0 +1,14 @@
+--cpu Cortex-M3
+".\glcd_spi_lpc1700.o"
+".\gpio.o"
+".\test_2.o"
+".\glcd_simulation.o"
+".\lcd.o"
+".\keys.o"
+".\led.o"
+".\startup_lpc17xx.o"
+".\system_lpc17xx.o"
+--strict --scatter ".\test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\test.map" -o .\test.axf
