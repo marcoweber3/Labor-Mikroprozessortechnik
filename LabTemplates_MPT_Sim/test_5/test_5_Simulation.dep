@@ -1,0 +1,122 @@
+Dependencies for Project 'test_5', Target 'Simulation': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\test_5.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\test_5.o --omf_browse .\test_5.crf --depend .\test_5.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
+I (..\Peripherals\Libraries\tests.h)(0x62790EEE)
+I (..\Peripherals\Libraries\GLCD.h)(0x62784736)
+I (..\Peripherals\Libraries\GLCD_S.h)(0x62784736)
+F (..\Peripherals\Source Files\GLCD_Simulation.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\glcd_simulation.o --omf_browse .\glcd_simulation.crf --depend .\glcd_simulation.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\math.h)(0x602585E8)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\string.h)(0x602585EE)
+I (..\Peripherals\Libraries\GLCD_S.h)(0x62784736)
+I (..\Peripherals\Libraries\gpio.h)(0x62784736)
+F (..\Peripherals\Source Files\timer.c)(0x627B7832)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\timer.o --omf_browse .\timer.crf --depend .\timer.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Peripherals\Libraries\timer.h)(0x627B7832)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
+I (..\Peripherals\Libraries\gpio.h)(0x62784736)
+I (..\Peripherals\Libraries\prio.h)(0x62784736)
+F (..\Peripherals\Libraries\timer.h)(0x627B7832)()
+F (..\Peripherals\Source Files\adc.c)(0x627901AA)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\adc.o --omf_browse .\adc.crf --depend .\adc.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Peripherals\Libraries\adc.h)(0x62784736)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
+I (..\Peripherals\Libraries\gpio.h)(0x62784736)
+I (..\Peripherals\Libraries\prio.h)(0x62784736)
+F (..\Peripherals\Source Files\dac.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\dac.o --omf_browse .\dac.crf --depend .\dac.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Peripherals\Libraries\dac.h)(0x62784736)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
+I (..\Peripherals\Libraries\gpio.h)(0x62784736)
+I (..\Peripherals\Libraries\prio.h)(0x62784736)
+F (..\Peripherals\Source Files\led.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Peripherals\Libraries\gpio.h)(0x62784736)
+F (..\Peripherals\Source Files\lcd.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\lcd.o --omf_browse .\lcd.crf --depend .\lcd.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Peripherals\Libraries\lcd.h)(0x62784736)
+F (..\Peripherals\Source Files\keys.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\keys.o --omf_browse .\keys.crf --depend .\keys.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Peripherals\Libraries\keys.h)(0x62784736)
+I (..\Peripherals\Libraries\gpio.h)(0x62784736)
+I (..\Peripherals\Libraries\prio.h)(0x62784736)
+F (..\Peripherals\Source Files\gpio.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\gpio.o --omf_browse .\gpio.crf --depend .\gpio.d)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (..\Peripherals\Libraries\gpio.h)(0x62784736)
+F (RTE\Device\LPC1769\RTE_Device.h)(0x62784736)()
+F (RTE\Device\LPC1769\startup_LPC17xx.s)(0x62784736)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1" --pd "_RTE_ SETA 1"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
+F (RTE\Device\LPC1769\system_LPC17xx.c)(0x62784736)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
+I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)

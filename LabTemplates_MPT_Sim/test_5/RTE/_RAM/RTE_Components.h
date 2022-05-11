@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'test_5' 
- * Target:  'Simulation' 
+ * Target:  'RAM' 
  */
 
 #ifndef RTE_COMPONENTS_H
