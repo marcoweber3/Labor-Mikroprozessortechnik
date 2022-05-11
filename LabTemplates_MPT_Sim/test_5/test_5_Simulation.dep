@@ -27,7 +27,7 @@ I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
 I (C:\Program Files\Keil v5\ARM\ARMCC\include\string.h)(0x602585EE)
 I (..\Peripherals\Libraries\GLCD_S.h)(0x62784736)
 I (..\Peripherals\Libraries\gpio.h)(0x62784736)
-F (..\Peripherals\Source Files\timer.c)(0x627B7832)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\timer.o --omf_browse .\timer.crf --depend .\timer.d)
+F (..\Peripherals\Source Files\timer.c)(0x627B78FD)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\timer.o --omf_browse .\timer.crf --depend .\timer.d)
 I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -36,11 +36,11 @@ I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (..\Peripherals\Libraries\timer.h)(0x627B7832)
+I (..\Peripherals\Libraries\timer.h)(0x627B78FD)
 I (C:\Program Files\Keil v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
 I (..\Peripherals\Libraries\gpio.h)(0x62784736)
 I (..\Peripherals\Libraries\prio.h)(0x62784736)
-F (..\Peripherals\Libraries\timer.h)(0x627B7832)()
+F (..\Peripherals\Libraries\timer.h)(0x627B78FD)()
 F (..\Peripherals\Source Files\adc.c)(0x627901AA)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I ..\Peripherals\Libraries-I.\RTE\Device\LPC1769-I.\RTE\_Simulation-IC:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_-o .\adc.o --omf_browse .\adc.crf --depend .\adc.d)
 I (C:\Users\marco\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\marco\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
