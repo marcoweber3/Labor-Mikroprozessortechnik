@@ -38,7 +38,7 @@ test5.c
 //================================================================================
 //  test T51
 //================================================================================
-#if (T5_1==1) //5.1
+#if (T5_1==1) //5.1 Counter with TA11
 
 int counter = 0;
 int TA10StatBefore = 0;
@@ -83,14 +83,12 @@ int main(void)
 //================================================================================
 //  test T52
 //================================================================================
-#if (T5_2==1)//5.2
+#if (T5_2==1)//5.2 Interrupt on timer reset
 
 uint32_t tcvalue=0;
 
 void TIMER0_IRQHandler(void)
 {
-	
-	
 	if(LPC_TIM0->IR & (1<<0))
 	{
 		LPC_TIM0->IR |= (1<<0); //reset interrupt flag
@@ -100,6 +98,19 @@ void TIMER0_IRQHandler(void)
 
 int main ()
 { 
+	GLCD_Init();  //Initialize graphical LCD
+	GLCD_Clear(White); // Clear graphical LCD display
+	GLCD_SetBackColor(Red); // Background color
+	GLCD_SetTextColor(Blue); // Text color
+	GLCD_DisplayString(0,0,FONT_16x24,(unsigned char*)" Lab Microproc-Lab     ");
+	GLCD_DisplayString(1,0,FONT_16x24,(unsigned char*)"Test5.2: Timer reset ");
+	GLCD_DisplayString(2,0,FONT_16x24,(unsigned char*)"      Group A8        ");
+	
+	GLCD_SetBackColor(White); // Background color
+	GLCD_SetTextColor(Black); // Text color
+	
+	GLCD_DisplayString(5,0,FONT_16x24,(unsigned char*)"Timer Counter:");
+
 	GPIOSetDir(2, 5, 1);
 	
 	Timer_Init(0,1000,100,1,0);//timer0, counts: 0..999, divider=100?, pclk=cclk, reset with MR0 -> (100000000/s) / (1000*100*1) = 1000/s -> 1ms
@@ -110,7 +121,8 @@ int main ()
 
 	while(1)
 	{
-		tcvalue=LPC_TIM0->TC;
+		tcvalue=LPC_TIM0->TC; // Timer Counter auslesen
+		GLCD_DisplayString(5,16,FONT_16x24,(unsigned char*)lcd_dez(tcvalue));
 		GLCD_Simulation();	
 	}
 }
@@ -121,7 +133,7 @@ int main ()
 //================================================================================
 //  test T53
 //================================================================================
-#if (T5_3==1) //5.3
+#if (T5_3==1) //5.3 Meassure high and low time of PWM
 
 uint32_t timerLow = 0;
 uint32_t timerHigh = 0;
@@ -173,7 +185,7 @@ int main(void)
 	GLCD_SetBackColor(Red); // Background color
 	GLCD_SetTextColor(Blue); // Text color
 	GLCD_DisplayString(0,0,FONT_16x24,(unsigned char*)" Lab Microproc-Lab     ");
-	GLCD_DisplayString(1,0,FONT_16x24,(unsigned char*)"Test5.1: Counter ");
+	GLCD_DisplayString(1,0,FONT_16x24,(unsigned char*)"Test5.3: Measure PWM ");
 	GLCD_DisplayString(2,0,FONT_16x24,(unsigned char*)"      Group A8        ");
 	
 	GLCD_SetBackColor(White); // Background color
@@ -221,14 +233,79 @@ int main(void)
 //================================================================================
 //  test T54
 //================================================================================
-#if (T5_4==1)
+#if (T5_4==1) //5.4 RGB LED with PWM
+
+uint32_t dutyCycleR = 0;
+uint32_t dutyCycleG = 0;
+uint32_t dutyCycleB = 0;
+
+uint32_t potiState = 0;
 
 int main(void)
 {	
+	
+	GLCD_Init();  //Initialize graphical LCD
+	GLCD_Clear(White); // Clear graphical LCD display
+	GLCD_SetBackColor(Red); // Background color
+	GLCD_SetTextColor(Blue); // Text color
+	GLCD_DisplayString(0,0,FONT_16x24,(unsigned char*)" Lab Microproc-Lab     ");
+	GLCD_DisplayString(1,0,FONT_16x24,(unsigned char*)"Test5.4: PWM LEDs ");
+	GLCD_DisplayString(2,0,FONT_16x24,(unsigned char*)"      Group A8        ");
+	
+	GLCD_SetBackColor(White); // Background color
+	GLCD_SetTextColor(Black); // Text color
+	
+	GLCD_DisplayString(4,0,FONT_16x24,(unsigned char*)"Red:");
+	GLCD_DisplayString(5,0,FONT_16x24,(unsigned char*)"Green:");
+	GLCD_DisplayString(6,0,FONT_16x24,(unsigned char*)"Blue:");
+	GLCD_Simulation();	
+	
+	ADC_Init(1<<4, 0);
+	Switch_Init();
+	
+	GPIOSetDir(2, 5, 1);
+	
+	Timer_Init (2,1000,100000000,1,0); //timer2, counts: 0..999, divider=10?, pclk=cclk, reset with MR0 -> (100000000/s) / (1000*100*1) = 1000/s -> 1ms
+	LPC_PINCON->PINSEL9 |= (2UL<<26);		//Activate MAT2.1 Green
+	LPC_TIM2->EMR |= (1UL<<6); //Set MAT2.1 = 0 at match
+	LPC_TIM2->MR1 = dutyCycleG; //CounterState at which action occurs
+	LPC_TIM2->MCR |= (1UL<<3);  //Interrupt at match
+	
+	Timer_Init (3,1000,100000000,1,2); //timer3, counts: 0..999, divider=10?, pclk=cclk, reset with MR0 -> (100000000/s) / (1000*100*1) = 1000/s -> 1ms
+	LPC_PINCON->PINSEL0 |= (3<<20);		//Activate MAT3.0 Blue
+	LPC_TIM3->EMR |= (1UL<<4); //Set MAT3.0 = 0 at match
+	LPC_TIM3->MR0 = dutyCycleB; //CounterState at which action occurs
+	LPC_TIM3->MCR |= (1UL<<0);  //Interrupt at match
+	
+	LPC_PINCON->PINSEL0 |= (3<<22);	//Activate MAT3.1 Red
+	LPC_TIM3->EMR |= (1UL<<6); //Set MAT3.1 = 0 at match
+	LPC_TIM3->MR1 = dutyCycleR; //CounterState at which action occurs
+	//LPC_TIM3->MCR |= (1UL<<3);  //Interrupt at match
 
 	while(1)
 	{
-		
+			ADC_StartCnv ((1<<4), 0); //Start ADC Conversion
+			while (!((ADC_Stat ()>>4)&1));//wait for end of conversion
+			potiState = ADC_GetValue(4); //output result4 to the LCD
+			
+			if(GPIOGetValue(1,25))
+			{
+				dutyCycleR = potiState / 49; //49,5
+			}
+			else if(GPIOGetValue(1,24))
+			{
+				dutyCycleG = potiState / 49;
+			}
+			else if(GPIOGetValue(1,23))
+			{
+				dutyCycleB = potiState / 49;
+			}
+
+			GLCD_DisplayString(4,8,FONT_16x24,(unsigned char*)lcd_dez(dutyCycleR));
+			GLCD_DisplayString(5,8,FONT_16x24,(unsigned char*)lcd_dez(dutyCycleG));
+			GLCD_DisplayString(6,8,FONT_16x24,(unsigned char*)lcd_dez(dutyCycleB));
+			
+			GLCD_Simulation();	
 	} // end while(1)
 }	// end main()
 
