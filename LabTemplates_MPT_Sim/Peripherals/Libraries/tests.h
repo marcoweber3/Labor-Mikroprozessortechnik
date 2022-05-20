@@ -70,8 +70,8 @@ description: control of compilation of test_n.c
 #define T5_1 0
 #define T5_2 0
 #define T5_3 0
-#define T5_4 1
-#define T5_5 0
+#define T5_4 0
+#define T5_5 1
 #define T5_6 0
 #define T5_7 0
 //********************************************************************************

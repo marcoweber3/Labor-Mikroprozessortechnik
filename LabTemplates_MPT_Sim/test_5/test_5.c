@@ -235,11 +235,64 @@ int main(void)
 //================================================================================
 #if (T5_4==1) //5.4 RGB LED with PWM
 
-uint32_t dutyCycleR = 0;
-uint32_t dutyCycleG = 0;
-uint32_t dutyCycleB = 0;
+uint32_t dutyCycleR = 100;
+uint32_t dutyCycleG = 100;
+uint32_t dutyCycleB = 100;
 
 uint32_t potiState = 0;
+
+
+void TIMER2_IRQHandler(void) // Green Handler
+{
+	if (LPC_TIM2->IR & (1<<1)) //Interrupt MR1 Green
+	{
+		LPC_TIM2->IR = (1<<1); //Reset pending bit
+		
+		if(LPC_TIM2->MR1 == 0) 
+		{
+			LPC_TIM2->MR1 = dutyCycleG; //CounterState at which action occurs
+		}
+		else
+		{
+			LPC_TIM2->MR1 = 0; //CounterState at which action occurs
+		}
+			
+	}
+} 
+
+void TIMER3_IRQHandler(void) //Red & Blue Handler
+{
+	GPIOToggle(2,5);
+	if (LPC_TIM3->IR & (1<<1)) //Interrupt MR1 Red
+	{
+		LPC_TIM3->IR = (1<<1); //Reset pending bit
+		
+		if(LPC_TIM3->MR1 == 0)
+		{
+			LPC_TIM3->MR1 = dutyCycleR; //CounterState at which action occurs
+		}
+		else
+		{
+			LPC_TIM3->MR1 = 0; //CounterState at which action occurs
+		}
+	}
+	
+	
+	if (LPC_TIM3->IR & (1<<0)) //Interrupt MR0 Blue    
+	{
+		LPC_TIM3->IR = (1<<0); //Reset pending bit
+		
+		if(LPC_TIM3->MR0 == 0)
+		{
+			LPC_TIM3->MR0 = dutyCycleB; //CounterState at which action occurs
+		}
+		else
+		{
+			LPC_TIM3->MR0 = 0; //CounterState at which action occurs
+		}
+	}
+}
+
 
 int main(void)
 {	
@@ -267,38 +320,53 @@ int main(void)
 	
 	Timer_Init (2,1000,100000000,1,0); //timer2, counts: 0..999, divider=10?, pclk=cclk, reset with MR0 -> (100000000/s) / (1000*100*1) = 1000/s -> 1ms
 	LPC_PINCON->PINSEL9 |= (2UL<<26);		//Activate MAT2.1 Green
-	LPC_TIM2->EMR |= (1UL<<6); //Set MAT2.1 = 0 at match
+	LPC_TIM2->EMR |= (3UL<<6); //Toggle MAT2.1 at match
 	LPC_TIM2->MR1 = dutyCycleG; //CounterState at which action occurs
 	LPC_TIM2->MCR |= (1UL<<3);  //Interrupt at match
 	
 	Timer_Init (3,1000,100000000,1,2); //timer3, counts: 0..999, divider=10?, pclk=cclk, reset with MR0 -> (100000000/s) / (1000*100*1) = 1000/s -> 1ms
 	LPC_PINCON->PINSEL0 |= (3<<20);		//Activate MAT3.0 Blue
-	LPC_TIM3->EMR |= (1UL<<4); //Set MAT3.0 = 0 at match
+	LPC_TIM3->EMR |= (3UL<<4); //Toggle MAT3.0 at match
 	LPC_TIM3->MR0 = dutyCycleB; //CounterState at which action occurs
 	LPC_TIM3->MCR |= (1UL<<0);  //Interrupt at match
 	
 	LPC_PINCON->PINSEL0 |= (3<<22);	//Activate MAT3.1 Red
-	LPC_TIM3->EMR |= (1UL<<6); //Set MAT3.1 = 0 at match
+	LPC_TIM3->EMR |= (3UL<<6); //Toggle MAT3.1 at match
 	LPC_TIM3->MR1 = dutyCycleR; //CounterState at which action occurs
 	//LPC_TIM3->MCR |= (1UL<<3);  //Interrupt at match
 
+	NVIC_SetPriority(TIMER2_IRQn, 17); //priority
+	NVIC_ClearPendingIRQ (TIMER2_IRQn); // Pending bits 
+	NVIC_EnableIRQ(TIMER2_IRQn);
+	
+	NVIC_SetPriority(TIMER3_IRQn, 16); //priority
+	NVIC_ClearPendingIRQ (TIMER3_IRQn); //clear pending bits 
+	NVIC_EnableIRQ(TIMER3_IRQn);
+	
+	
+	LPC_TIM2->TCR = (1<<1); //Reset von Timer2
+	LPC_TIM2->TCR = (1<<0); //Start von Timer2
+	
+	LPC_TIM3->TCR = (1<<1); //Reset von Timer3
+	LPC_TIM3->TCR = (1<<0); //Start von Timer3
+	
 	while(1)
 	{
 			ADC_StartCnv ((1<<4), 0); //Start ADC Conversion
 			while (!((ADC_Stat ()>>4)&1));//wait for end of conversion
-			potiState = ADC_GetValue(4); //output result4 to the LCD
+			potiState = ADC_GetValue(4)*1000; //output result4 to the LCD
 			
-			if(GPIOGetValue(1,25))
+			if(GPIOGetValue(1,25)) //S7
 			{
-				dutyCycleR = potiState / 49; //49,5
+				dutyCycleR = potiState / 40950;
 			}
-			else if(GPIOGetValue(1,24))
+			else if(GPIOGetValue(1,24)) //S6
 			{
-				dutyCycleG = potiState / 49;
+				dutyCycleG = potiState / 40950;
 			}
-			else if(GPIOGetValue(1,23))
+			else if(GPIOGetValue(1,23)) //S5
 			{
-				dutyCycleB = potiState / 49;
+				dutyCycleB = potiState / 40950;
 			}
 
 			GLCD_DisplayString(4,8,FONT_16x24,(unsigned char*)lcd_dez(dutyCycleR));
@@ -314,20 +382,71 @@ int main(void)
 //================================================================================
 //  test T5_55
 //================================================================================
-#if (T5_5==1)
+#if (T5_5==1) //5.5 warbling square wave
+
+int period = 125000;
+int dir = 1;
+
+void TIMER0_IRQHandler(void){
+	
+	if(LPC_TIM0->IR & (1<<0)){
+		LPC_TIM0->IR |= (1<<0); //reset pending bit
+		
+		if (period >= 250000)
+		{
+			dir = 0;
+		}
+		else if (period <=  125000)
+		{
+			dir = 1;
+		}
+		
+		if (dir == 1)
+		{
+			period += 50;
+		}
+		else if (dir == 0)
+		{
+			period -= 50;
+		}
+		
+		LPC_TIM0->MR0 = period; //CounterState at which action occurs
+	
+	}
+}
 
 int main(void)
 {	
-
+	GLCD_Init();  //Initialize graphical LCD
+	GLCD_Clear(White); // Clear graphical LCD display
+	GLCD_SetBackColor(Red); // Background color
+	GLCD_SetTextColor(Blue); // Text color
+	GLCD_DisplayString(0,0,FONT_16x24,(unsigned char*)" Lab Microproc-Lab     ");
+	GLCD_DisplayString(1,0,FONT_16x24,(unsigned char*)"Test5.5: Speaker ");
+	GLCD_DisplayString(2,0,FONT_16x24,(unsigned char*)"      Group A8        ");
+	
+	GLCD_SetBackColor(White); // Background color
+	GLCD_SetTextColor(Black); // Text color
+	
+	GLCD_DisplayString(5,0,FONT_16x24,(unsigned char*)"Period:");
+	GLCD_Simulation();	
+	
+	Timer_Init (0,125000,100000000,1,0);
+	LPC_PINCON->PINSEL3 |= (3UL<<24); //Activate MAT0.0
+	LPC_TIM0->EMR |= (3UL<<4); //Toggle Pin at match
+	
 	while(1)
 	{
-		
+			GLCD_DisplayString(5,9,FONT_16x24,(unsigned char*)lcd_dez(period));
+			GLCD_Simulation();	
 	} // end while(1)
 }	// end main()
 
 #endif
 
-
+//================================================================================
+//  test T5_6
+//================================================================================
 #if (T5_6==1)
 
 int main(void)
