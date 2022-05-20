@@ -38,7 +38,7 @@ test5.c
 //================================================================================
 //  test T51
 //================================================================================
-#if (T5_1==1) //5.1 Counter with TA11
+#if (T5_1==1) //5.1 Counter with TA10
 
 int counter = 0;
 int TA10StatBefore = 0;
@@ -61,7 +61,7 @@ int main(void)
 	GLCD_SetBackColor(White); // Background color
 	GLCD_SetTextColor(Black); // Text color
 	
-	GLCD_DisplayString(4,0,FONT_16x24,(unsigned char*)"Press button TA11");
+	GLCD_DisplayString(4,0,FONT_16x24,(unsigned char*)"Press button TA10");
 	GLCD_DisplayString(5,0,FONT_16x24,(unsigned char*)"Timer 0: ");
 	
 	GLCD_Simulation();	
@@ -389,7 +389,8 @@ int dir = 1;
 
 void TIMER0_IRQHandler(void){
 	
-	if(LPC_TIM0->IR & (1<<0)){
+	if(LPC_TIM0->IR & (1<<0))
+	{
 		LPC_TIM0->IR |= (1<<0); //reset pending bit
 		
 		if (period >= 250000)

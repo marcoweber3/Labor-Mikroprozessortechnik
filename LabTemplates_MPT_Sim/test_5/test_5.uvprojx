@@ -433,6 +433,21 @@
               <FileType>5</FileType>
               <FilePath>..\Peripherals\Libraries\timer.h</FilePath>
             </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>GLCD_SPI_LPC1700.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\GLCD_SPI_LPC1700.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\I2C.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -869,6 +884,21 @@
               <FileName>timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Peripherals\Libraries\timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>GLCD_SPI_LPC1700.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\GLCD_SPI_LPC1700.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\I2C.c</FilePath>
             </File>
           </Files>
         </Group>
