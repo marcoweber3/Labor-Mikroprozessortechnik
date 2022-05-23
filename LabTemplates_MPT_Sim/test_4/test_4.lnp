@@ -10,6 +10,7 @@
 ".\glcd_spi_lpc1700.o"
 ".\adc.o"
 ".\dac.o"
+".\timer.o"
 ".\startup_lpc17xx.o"
 ".\system_lpc17xx.o"
 --strict --scatter ".\test_4.sct"

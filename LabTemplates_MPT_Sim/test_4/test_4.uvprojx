@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>LPC1769</Device>
           <Vendor>NXP (founded by Philips)</Vendor>
-          <PackID>Keil.LPC1700_DFP.2.5.0</PackID>
+          <PackID>Keil.LPC1700_DFP.2.7.1</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x10000000-0x10007FFF) IRAM2(0x2007C000-0x20083FFF) IROM(0-0x7FFFF) CLOCK(12000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -448,6 +448,11 @@
               <FileType>5</FileType>
               <FilePath>..\Peripherals\Libraries\dac.h</FilePath>
             </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -462,13 +467,13 @@
       <TargetName>RAM</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::ARMCC</pCCUsed>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC1769</Device>
           <Vendor>NXP (founded by Philips)</Vendor>
-          <PackID>Keil.LPC1700_DFP.2.5.0</PackID>
+          <PackID>Keil.LPC1700_DFP.2.7.1</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x10000000-0x10007FFF) IRAM2(0x2007C000-0x20083FFF) IROM(0-0x7FFFF) CLOCK(12000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -900,6 +905,11 @@
               <FileType>5</FileType>
               <FilePath>..\Peripherals\Libraries\dac.h</FilePath>
             </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -934,7 +944,7 @@
       <file attr="config" category="header" condition="LPC1700 CMSIS Device" name="RTE_Driver\Config\RTE_Device.h" version="2.3.0">
         <instance index="0">RTE\Device\LPC1769\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC17xx CMSIS Device ARMCC"/>
-        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.5.0"/>
+        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.1"/>
         <targetInfos>
           <targetInfo name="RAM"/>
           <targetInfo name="Simulation"/>
@@ -943,7 +953,7 @@
       <file attr="config" category="source" condition="LPC176x" name="Device\Source\ARM\startup_LPC17xx.s" version="1.0.0">
         <instance index="0">RTE\Device\LPC1769\startup_LPC17xx.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC17xx CMSIS Device ARMCC"/>
-        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.5.0"/>
+        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.1"/>
         <targetInfos>
           <targetInfo name="RAM"/>
           <targetInfo name="Simulation"/>
@@ -952,7 +962,7 @@
       <file attr="config" category="source" condition="LPC176x" name="Device\Source\system_LPC17xx.c" version="1.0.0">
         <instance index="0">RTE\Device\LPC1769\system_LPC17xx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC17xx CMSIS Device ARMCC"/>
-        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.5.0"/>
+        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.1"/>
         <targetInfos>
           <targetInfo name="RAM"/>
           <targetInfo name="Simulation"/>
