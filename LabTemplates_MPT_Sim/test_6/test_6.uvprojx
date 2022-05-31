@@ -10,13 +10,13 @@
       <TargetName>Simulation</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>LPC1769</Device>
           <Vendor>NXP (founded by Philips)</Vendor>
-          <PackID>Keil.LPC1700_DFP.2.5.0</PackID>
+          <PackID>Keil.LPC1700_DFP.2.7.1</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x10000000-0x10007FFF) IRAM2(0x2007C000-0x20083FFF) IROM(0-0x7FFFF) CLOCK(12000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -185,6 +185,7 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -351,7 +352,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -392,6 +393,56 @@
               <FileType>1</FileType>
               <FilePath>..\Peripherals\Source Files\GLCD_Simulation.c</FilePath>
             </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>GLCD_SPI_LPC1700.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\GLCD_SPI_LPC1700.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>keys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\keys.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -412,7 +463,7 @@
         <TargetCommonOption>
           <Device>LPC1769</Device>
           <Vendor>NXP (founded by Philips)</Vendor>
-          <PackID>Keil.LPC1700_DFP.2.5.0</PackID>
+          <PackID>Keil.LPC1700_DFP.2.7.1</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x10000000-0x10007FFF) IRAM2(0x2007C000-0x20083FFF) IROM(0-0x7FFFF) CLOCK(12000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -581,6 +632,7 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -747,7 +799,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -788,6 +840,56 @@
               <FileType>1</FileType>
               <FilePath>..\Peripherals\Source Files\GLCD_Simulation.c</FilePath>
             </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>GLCD_SPI_LPC1700.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\GLCD_SPI_LPC1700.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>keys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\keys.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Source Files\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -822,7 +924,7 @@
       <file attr="config" category="header" condition="LPC1700 CMSIS Device" name="RTE_Driver\Config\RTE_Device.h" version="2.3.0">
         <instance index="0">RTE\Device\LPC1769\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC17xx CMSIS Device ARMCC"/>
-        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.5.0"/>
+        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.1"/>
         <targetInfos>
           <targetInfo name="RAM"/>
           <targetInfo name="Simulation"/>
@@ -831,7 +933,7 @@
       <file attr="config" category="source" condition="LPC176x" name="Device\Source\ARM\startup_LPC17xx.s" version="1.0.0">
         <instance index="0">RTE\Device\LPC1769\startup_LPC17xx.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC17xx CMSIS Device ARMCC"/>
-        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.5.0"/>
+        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.1"/>
         <targetInfos>
           <targetInfo name="RAM"/>
           <targetInfo name="Simulation"/>
@@ -840,7 +942,7 @@
       <file attr="config" category="source" condition="LPC176x" name="Device\Source\system_LPC17xx.c" version="1.0.0">
         <instance index="0">RTE\Device\LPC1769\system_LPC17xx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC17xx CMSIS Device ARMCC"/>
-        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.5.0"/>
+        <package name="LPC1700_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.1"/>
         <targetInfos>
           <targetInfo name="RAM"/>
           <targetInfo name="Simulation"/>
