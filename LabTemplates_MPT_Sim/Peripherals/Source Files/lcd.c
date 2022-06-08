@@ -130,3 +130,17 @@ char *TempConv(unsigned short val)
 	text_string[6] = 0;
 	return (text_string);
 }
+
+char *TempConv2(unsigned short val)
+{
+	static char text_string[7];
+	unsigned char asc[] = "0123456789,C";
+	text_string[0] = asc[(val/1000)%10];
+	text_string[1] = asc[(val/100)%10];
+	text_string[2] = asc[10];
+	text_string[3] = asc[(val/10)%10];
+	text_string[4] = asc[(val/1)%10];
+	text_string[5] = asc[11];
+	text_string[6] = 0;
+	return (text_string);
+}

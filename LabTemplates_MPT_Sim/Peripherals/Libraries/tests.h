@@ -78,10 +78,10 @@ description: control of compilation of test_n.c
 
 // test 6
 #define T6_1 0
-#define T6_2 1
+#define T6_2 0
 #define T6_3 0
 #define T6_4 0
-#define T6_5 0
+#define T6_5 1
 #define T6_6 0
 #define T6_7 0
 //********************************************************************************

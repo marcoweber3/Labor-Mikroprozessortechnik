@@ -119,26 +119,195 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>ARMRTXEVENTFLAGS</Key>
+          <Name>-L70 -Z18 -C0 -M0 -T1</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGDARM</Key>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(350=-1,-1,-1,-1,0)(250=-1,-1,-1,-1,0)(270=-1,-1,-1,-1,0)(313=-1,-1,-1,-1,0)(291=-1,-1,-1,-1,0)(302=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(320=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(330=-1,-1,-1,-1,0)(332=-1,-1,-1,-1,0)(333=-1,-1,-1,-1,0)(334=-1,-1,-1,-1,0)(335=-1,-1,-1,-1,0)(336=-1,-1,-1,-1,0)(345=-1,-1,-1,-1,0)(346=-1,-1,-1,-1,0)(381=-1,-1,-1,-1,0)(382=-1,-1,-1,-1,0)(383=-1,-1,-1,-1,0)(384=-1,-1,-1,-1,0)(197=-1,-1,-1,-1,0)(198=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(192=-1,-1,-1,-1,0)(199=-1,-1,-1,-1,0)(180=-1,-1,-1,-1,0)(261=-1,-1,-1,-1,0)(262=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(121=-1,-1,-1,-1,0)(122=-1,-1,-1,-1,0)(123=-1,-1,-1,-1,0)(124=-1,-1,-1,-1,0)(170=-1,-1,-1,-1,0)(142=-1,-1,-1,-1,0)(150=-1,-1,-1,-1,0)(400=-1,-1,-1,-1,0)(370=-1,-1,-1,-1,0)(160=-1,-1,-1,-1,0)(280=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>ARMDBGFLAGS</Key>
+          <Name>-T0</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>UL2CM3</Key>
           <Name>-U-O14 -O14 -S0 -C0 -P00 -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO17 -FD10000000 -FCFE0 -FN1 -FF0LPC_IAP_512.FLM -FS00 -FL080000 -FP0($$Device:LPC1769$Flash\LPC_IAP_512.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>test</ItemText>
+        </Ww>
+      </WatchWindow1>
+      <ToolboxButtons>
+        <Wi>
+          <IntNumber>0</IntNumber>
+          <FirstString>S7_0/1</FirstString>
+          <SecondString>S7_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>1</IntNumber>
+          <FirstString>S6_0/1</FirstString>
+          <SecondString>S6_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>2</IntNumber>
+          <FirstString>S5_0/1</FirstString>
+          <SecondString>S5_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>3</IntNumber>
+          <FirstString>S4_0/1</FirstString>
+          <SecondString>S4_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>4</IntNumber>
+          <FirstString>S3_0/1</FirstString>
+          <SecondString>S3_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>5</IntNumber>
+          <FirstString>S2_0/1</FirstString>
+          <SecondString>S2_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>6</IntNumber>
+          <FirstString>S1_0/1</FirstString>
+          <SecondString>S1_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>7</IntNumber>
+          <FirstString>S0_0/1</FirstString>
+          <SecondString>S0_0_1 ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>8</IntNumber>
+          <FirstString>JST_Left</FirstString>
+          <SecondString>JST_Left ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>9</IntNumber>
+          <FirstString>JST_Right</FirstString>
+          <SecondString>JST_Right ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>10</IntNumber>
+          <FirstString>JST_Up</FirstString>
+          <SecondString>JST_Up ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>11</IntNumber>
+          <FirstString>JST_Down</FirstString>
+          <SecondString>JST_Down ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>12</IntNumber>
+          <FirstString>JST_Center</FirstString>
+          <SecondString>JST_Center ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>13</IntNumber>
+          <FirstString>JST_Release</FirstString>
+          <SecondString>JST_Release ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>14</IntNumber>
+          <FirstString>TA10_Push_Release</FirstString>
+          <SecondString>TA10_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>15</IntNumber>
+          <FirstString>TA11_Push_Release</FirstString>
+          <SecondString>TA11_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>16</IntNumber>
+          <FirstString>TA12_Push_Release</FirstString>
+          <SecondString>TA12_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>17</IntNumber>
+          <FirstString>M_TA_1_Push_Rel</FirstString>
+          <SecondString>M_TA_1_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>18</IntNumber>
+          <FirstString>M_TA_2_Push_Rel</FirstString>
+          <SecondString>M_TA_2_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>19</IntNumber>
+          <FirstString>M_TA_3_Push_Rel</FirstString>
+          <SecondString>M_TA_3_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>20</IntNumber>
+          <FirstString>M_TA_4_Push_Rel</FirstString>
+          <SecondString>M_TA_4_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>21</IntNumber>
+          <FirstString>M_TA_5_Push_Rel</FirstString>
+          <SecondString>M_TA_5_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>22</IntNumber>
+          <FirstString>M_TA_6_Push_Rel</FirstString>
+          <SecondString>M_TA_6_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>23</IntNumber>
+          <FirstString>M_TA_7_Push_Rel</FirstString>
+          <SecondString>M_TA_7_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>24</IntNumber>
+          <FirstString>M_TA_8_Push_Rel</FirstString>
+          <SecondString>M_TA_8_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>25</IntNumber>
+          <FirstString>M_TA_9_Push_Rel</FirstString>
+          <SecondString>M_TA_9_P_R ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>26</IntNumber>
+          <FirstString>Encoder_A</FirstString>
+          <SecondString>Enc_A ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>27</IntNumber>
+          <FirstString>Encoder_B</FirstString>
+          <SecondString>Enc_B ()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>28</IntNumber>
+          <FirstString>Encoder_Push_Rel</FirstString>
+          <SecondString>Enc_P_R ()</SecondString>
+        </Wi>
+      </ToolboxButtons>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
-        <viewmode>0</viewmode>
+        <viewmode>1</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
-        <aTbox>0</aTbox>
+        <aTbox>1</aTbox>
         <AscS1>0</AscS1>
         <AscS2>0</AscS2>
         <AscS3>0</AscS3>
@@ -421,7 +590,7 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Peripherals\Source Files\GLCD_SPI_LPC1700.c</PathWithFileName>
@@ -469,7 +638,7 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>10</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Peripherals\Source Files\lcd.c</PathWithFileName>
