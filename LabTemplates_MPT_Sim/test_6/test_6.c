@@ -32,8 +32,8 @@ test_6.c
 //Definition v. Konstanten:
 //================================================================================
 
-#define FONT_6x8   0     //Font-Index für ASCII Font 6x8
-#define FONT_16x24 1     //Font-Index für ASCII Font 16x24
+#define FONT_6x8   0     //Font-Index fï¿½r ASCII Font 6x8
+#define FONT_16x24 1     //Font-Index fï¿½r ASCII Font 16x24
 
 //================================================================================
 //  test T6_1
@@ -306,7 +306,7 @@ int main(void)
 	I2C1_Init();sbuf[0]=0;sbuf[1]=0x17;//initialize 7 segment display, sbuf[] is to define
 	ret=I2C1Write(0x38,sbuf,2); //it is only possible with connected hardware
 	
-	//temp sensor init
+	//temp sensor config
 	sbuf[0]=1;sbuf[1]=0x60; ret=I2C1Write(0x48,sbuf,2);//sbuf = 0000 0001   0110 0000
 	sbuf[0]=0;
 	
@@ -390,7 +390,7 @@ int main(void)
 			I2C1Write(0x50, sbuf, 3);
 			
 			//read from eeprom
-			I2C1Write(0x50, sbuf, 2);
+			//I2C1Write(0x50, sbuf, 2); //ggf. wieder einkommentieren!!!
 			I2C1Read(0x50, &sbuf[2], 1);
 			
 			//display values
